@@ -13,21 +13,20 @@ class App extends Component {
     return (
       <div className="App">
         
-    <Header />
+        <Header />
 
-    <main className="expanded row">
+        <main className="expanded row">
 
-      <Article />
-      
-      <Side />
+          <Article />
+          
+          <Side />
 
-      <OtherArticle />
+          <OtherArticle />
 
-    </main>
+        </main>
 
-    <Footer />
+        <Footer />
 
-    
       </div>
     );
   }
