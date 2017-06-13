@@ -7,6 +7,11 @@
   margin: 20px 0;
 }
 
+.input-group-field{
+  margin-top: 10px;
+  padding: 40px 20px;
+}
+
 .gold {
   color: #CFB53B;
 }

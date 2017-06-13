@@ -8,8 +8,18 @@ class Reaction extends Component {
     return (
         <div className="article-links">
             <Comments />
-
             <Share />
+            <div className="input-group">
+                <textarea
+                    type="text"
+                    rows="4"
+                    cols="50"
+                    className="input-group-field"
+                    name="comments"
+                    placeholder="Write a comment" 
+                    >
+                    </textarea>
+                </div>
             </div>
     );
 }}
