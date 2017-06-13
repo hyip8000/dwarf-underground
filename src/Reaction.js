@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
 import './Reaction.css'
+import Comments from './Comment.js'
+import Share from './Share.js'
 
 class Reaction extends Component {
   render() {
     return (
         <div className="article-links">
-            <a className="article-link" href="#">
-                <i className="fa fa-comments-o"></i>
-                <span className="article-link-text">Comments</span>
-            </a>
-            <a className="article-link" href="#">
-                <i className="fa fa-share"></i>
-                <span className="article-link-text">Share Post</span>
-            </a>
+            <Comments />
+
+            <Share />
             </div>
     );
 }}
