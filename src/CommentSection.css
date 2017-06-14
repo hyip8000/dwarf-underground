@@ -1,0 +1,19 @@
+.success-button{
+    font-family: 'Cinzel Decorative', cursive;
+    background-color: #CFB53B;
+    color: white;
+}
+
+.input-group-button {
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.input-group-button {
+  padding: .65em 0.8em;
+  transition: 0.25s;
+}
+
+/*.actions .button:hover {
+  transform: scale(1.1);
+}*/

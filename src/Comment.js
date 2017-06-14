@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Share from './Share.js'
+import CommentSection from './CommentSection.js'
 
 class Comment extends Component {
   constructor(){
@@ -25,6 +26,10 @@ class Comment extends Component {
     } 
   }
 
+  commentSection(){
+      return <CommentSection active={this.state.active} />
+  }
+
   render() {
     return (
         <div>
@@ -32,18 +37,10 @@ class Comment extends Component {
                 <i className="fa fa-comments-o"></i>
                 <span className="article-link-text">Comments</span>
             </a>
+
             <Share />
-                <textarea
-                    type="text"
-                    rows="4"
-                    cols="50"
-                    id="comments"
-                    className="input-group-field"
-                    name="comments"
-                    placeholder="Write a comment" 
-                    style={{display: 'none'}}
-                    >
-                    </textarea>
+            
+            {this.commentSection()}
                 </div>
     );
 }}
