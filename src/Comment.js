@@ -37,9 +37,8 @@ class Comment extends Component {
                 <i className="fa fa-comments-o"></i>
                 <span className="article-link-text">Comments</span>
             </a>
-
-            <Share />
             
+            <Share />
             {this.commentSection()}
                 </div>
     );
