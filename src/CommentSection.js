@@ -4,22 +4,32 @@ import './CommentSection.css'
 class CommentSection extends Component {
     constructor(props){
       super(props)
-     // this.comments = []
+      this.updateComment = this.updateComment.bind(this)
       this.addComment = this.addComment.bind(this)
       this.state = {
-        comments:''
+        comments:'',
+        comment: [],
       }    
   }
 
-    addComment(ev){
+    updateComment(ev){
         ev.preventDefault()
-        const f = ev.target
-        
+       
         this.setState({
-            comments = f.value
-        }, () => console.log(this.state))
-       // this.comments.push(f.comments.value)
-        
+            comments: ev.target.value
+        }, () => console.log(this.state))      
+    }
+
+    addComment(ev){
+        const state = {...this.state} //updating every time
+        const comment ={
+            time: new Date(),
+            text: this.state.comments,
+        }
+        state.comment.push(comment)
+        state.comments = ''
+        this.setState(state, () => console.log(this.state))
+
     }
 
     render() {
@@ -27,20 +37,26 @@ class CommentSection extends Component {
         <div className="comments">
             <textarea
                     value={this.state.comments}
-                    onChange={this.addComment}
+                    onChange={this.updateComment}
                     placeholder="Enter Comment Here"
                     >
                 </textarea>
-                <button className="button">Add Comments</button>
+                <button 
+                    className="button"
+                    onClick={this.addComment}                
+                >Add Comments</button>
+                {this.state.comment.map((comment, i) => <Comment key={i} comment={comment} />)}
         </div>
-        <form id="comments-form">
-                <ul className="nobullet" id="comments-list">
-                    <li className="comments template">
-                        <span className="comments"></span>
-                        </li>
-                    </ul>
-            </form>
+       
     )
 }}
+
+function Comment (props){
+    return(
+        <div className="comment">
+            <div>{props.comment.text}</div>
+        </div>
+    )
+}
 
 export default CommentSection;

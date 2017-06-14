@@ -17,11 +17,11 @@ class Comment extends Component {
     const currentState = this.state.active
     if (currentState){
         //hide
-        document.getElementById("comments").style.display = 'none'
+        document.getElementsByClassName("comments")[0].style.display = 'none'
         this.setState({active: !currentState})
     }else{
         //show
-        document.getElementById("comments").style.display = 'block'
+        document.getElementsByClassName("comments")[0].style.display = 'block'
         this.setState({active: !currentState})
     } 
   }
