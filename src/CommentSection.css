@@ -1,15 +1,32 @@
-.success-button{
-    font-family: 'Cinzel Decorative', cursive;
-    background-color: #CFB53B;
-    color: white;
+.comments {
+  margin-top: 25px;
 }
 
-.input-group-button {
-  margin-bottom: 0;
-  white-space: nowrap;
+.comments button {
+  background-color: #E9CF55;
 }
 
-.input-group-button {
-  padding: .65em 0.8em;
-  transition: 0.25s;
+.comments button:hover {
+  background-color: #B69C22;
+}
+
+.comment {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+
+.comment:first-of-type {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.comment:last-child {
+  border-bottom: 1px solid #ccc;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.comment:nth-child(even) {
+  background-color: #f9f9f9;
 }
